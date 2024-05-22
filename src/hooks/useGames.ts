@@ -37,6 +37,7 @@ const useGames = (
         genres: gameQuery.genre?.id,
         // platforms: selectedPlatform?.id,
         platforms: gameQuery.platform?.id,
+        ordering: gameQuery.sortOrder,
       },
     },
     // [selectedGenre?.id, selectedPlatform?.id] // only re-fetch when genre or platform changes
