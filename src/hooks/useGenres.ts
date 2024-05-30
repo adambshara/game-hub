@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 import useData from "./useData";
+import genres from "../data/genres";
 
 export interface Genre {
   id: number;
@@ -14,6 +15,10 @@ export interface Genre {
 // }
 
 const useGenres = () => useData<Genre>("/genres");
+// when you get it from the server.
+
+// const useGenres = () => ({ data: genres, isLoading: false, error: null });
+//if you wanted it without calling the server.
 // const [genres, setGenres] = useState<Genre[]>([]);
 // const [error, setError] = useState("");
 // const [isLoading, setLoading] = useState(false);
