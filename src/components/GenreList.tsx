@@ -1,6 +1,6 @@
 import React from "react";
 import useGneres, { Genre } from "../hooks/useGenres";
-import useData from "../hooks/useData";
+
 import useGenres from "../hooks/useGenres";
 
 import {
@@ -32,7 +32,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
               <Image
